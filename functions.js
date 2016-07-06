@@ -83,5 +83,33 @@ function numSquared(num) {
 }
 
 var arrayNum = [3,5,7,8,10];
+//The map() method creates a new array with the results of calling a provided 
+//function on every element in this array.
 console.log(arrayNum.map(numSquared));
-//use this function with map on an array of numbers to check the result.
+
+
+//Question 4: Mapping Object Properties
+function powerObjectPropertyNum(obj) {
+    return Math.pow(obj.num,2);
+}
+
+var arrayOfObjOfNum = [
+    
+    {
+        num: 2,
+        salut: "hello"
+    },
+    
+    {
+        num: 5,
+        salut: "bye"
+    },
+    
+    {
+        num: 10,
+        salut: "good night"
+    }
+    
+];
+
+console.log(arrayOfObjOfNum.map(powerObjectPropertyNum));
