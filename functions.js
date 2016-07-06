@@ -159,3 +159,42 @@ console.log(divide);
 var multiplier = operationMaker("mult");
 var product = multiplier(5,10);   //50
 console.log(product);
+
+
+//Question 5: Better way
+function operationMaker2(operation) {
+    return function(num1, num2) {
+        if (operation === "add") {
+            return num1 + num2;
+        }
+        else if (operation === "subtract") {
+            return num1 - num2;
+        }
+        else if (operation === "mult") {
+            return num1 * num2;
+        }
+        else if (operation === "div") {
+            return num1 / num2;
+        }
+    }
+}
+
+
+var adder2 = operationMaker2("add");
+var sum2 = adder2(10,10);  //15
+console.log(sum2);
+
+var subtract2 = operationMaker2("subtract");
+var difference2 = subtract2(10,10);
+console.log(difference2);
+
+var division2 = operationMaker2("div");
+var divide2 = division2(10,10);
+console.log(divide2);
+
+var multiplier2 = operationMaker2("mult");
+var product2 = multiplier2(10,10);   //50
+console.log(product2);
+
+//faster way to do the same thing as above
+console.log(operationMaker2('add')(100,50));
