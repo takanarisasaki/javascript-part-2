@@ -115,3 +115,47 @@ var arrayOfObjOfNum = [
 console.log(arrayOfObjOfNum.map(powerObjectPropertyNum));
 
 
+//Question 5:Functions within Function
+function operationMaker(operation) {
+    
+    if (operation === "add") {
+        return function adder(num1, num2) {
+            return num1 + num2;
+        }
+    }
+    
+    else if (operation === "subtract") {
+        return function subtract(num1, num2) {
+            return num1 - num2;
+        }
+    }
+
+    else if (operation === "mult") {
+        return function mult(num1, num2) {
+            return num1 * num2;
+        }
+    }
+        
+    else if (operation === "div") {
+        return function div(num1, num2) {
+            return num1 / num2;
+        }
+    }
+
+}
+
+var adder = operationMaker("add");
+var sum = adder(5,10);  //15
+console.log(sum);
+
+var subtract = operationMaker("subtract");
+var difference = subtract(10,5);
+console.log(difference);
+
+var division = operationMaker("div");
+var divide = division(20,5);
+console.log(divide);
+
+var multiplier = operationMaker("mult");
+var product = multiplier(5,10);   //50
+console.log(product);
