@@ -113,3 +113,5 @@ var arrayOfObjOfNum = [
 ];
 
 console.log(arrayOfObjOfNum.map(powerObjectPropertyNum));
+
+
