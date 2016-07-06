@@ -8,10 +8,10 @@ function Warrior(name, gender) {
 }
 
 
-var maleWarrior = new Warrior("John", "M");
-var femaleWarrior = new Warrior("Sally", "F");
-console.log(maleWarrior);
-console.log(femaleWarrior);
+var john = new Warrior("John", "M");
+var sally = new Warrior("Sally", "F");
+//console.log(john);
+//console.log(sally);
 
 function fight(warrior) {
     console.log(warrior.name +  " rushes to the arena with " + warrior.weapon);
@@ -35,4 +35,12 @@ function fight(warrior) {
     }
 }
 
-fight(maleWarrior)(femaleWarrior);
+//fight(maleWarrior)(femaleWarrior);
+
+
+//Make many warriors fight
+var bob = new Warrior("Bob", "M"); 
+var sammy = new Warrior("Sammy", "F");
+
+fight(sammy)(bob);
+fight(john)(sally);
