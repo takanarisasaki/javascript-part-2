@@ -23,5 +23,57 @@ var arrayOfString = ["Hello", "Food", "Computer", "Coding"];
 //It does this for all combinations of arrayOfString, ending up with sorted array
 //using compare function.
 arrayOfString.sort(compare);
+//arrayOfSTring is now already sorted with arrayOfSTring.sort(compare)
 console.log("Sorted String:", arrayOfString);
+
+
+var numbers = [1,2,4,1,3]
+
+//Question 2: Sort Object Properties
+var arrayOfObject = [
+
+    {
+        name: "Takanari",
+        email: "takanari.s@hotmail.com"
+    },
+    
+    {
+        name: "Bob",
+        email: "bob@yahoo.ca"
+    },
+    
+    {
+        name: "John",
+        email: "john@gmail.com"
+    }
+
+];
+
+function longerName(obj1, obj2) {
+    if (obj1.name.length < obj2.name.length) {
+        return 1;
+    }
+    else if (obj1.name.length > obj2.name.length) {
+        return -1;
+    }
+    else {
+        return 0;
+    }
+}
+
+function alphabetical(obj1, obj2) {
+    if (obj1.email > obj2.email) {
+        return 1;
+    }
+    else if(obj1.email < obj2.email) {
+        return -1;
+    }
+    else {
+        return 0;
+    }
+}
+
+console.log(arrayOfObject.sort(longerName));
+console.log(arrayOfObject.sort(alphabetical));
+
 
