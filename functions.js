@@ -77,3 +77,11 @@ console.log(arrayOfObject.sort(longerName));
 console.log(arrayOfObject.sort(alphabetical));
 
 
+//Question 3: Array.prototype.map
+function numSquared(num) {
+    return Math.pow(num,2);
+}
+
+var arrayNum = [3,5,7,8,10];
+console.log(arrayNum.map(numSquared));
+//use this function with map on an array of numbers to check the result.
