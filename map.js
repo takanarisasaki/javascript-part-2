@@ -1,7 +1,5 @@
 function Tile(type) {
-    var tile = {
-        type: type
-    }
+    this.type = type;
 }
 
 Tile.prototype.isWalkable = function isWalkable() {
@@ -19,20 +17,22 @@ function Map(width, height) {
     this.width = width;
     this.height = height;
     
-    var storeTwoDimensional = [];
-    var storeWidth = [];
+    var finalMap = [];
+
+
 
     for (var i = 0; i < height; i++) {
+        var innerWidth = [];
         for (var j = 0; j < width; j++) {
-            storeWidth.push(new Tile);
-            
-            tileType[Math.floor(Math.random() * 3)];
-            
+            innerWidth.push(new Tile(tileType[Math.floor(Math.random() * 3)]));
         }
-        storeTwoDimensional.push(storeWidth);
+        finalMap.push(innerWidth);
     }
+    console.log(finalMap);
     
 }
 
 var map1 = new Tile("grass");
 console.log(map1);
+
+console.log(Map(5,7));
